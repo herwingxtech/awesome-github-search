@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif; /* Fuente más legible */
+    margin: 20px;          /* Margen alrededor del contenido */
+}
+
+form {
+    margin-bottom: 20px; /* Espacio entre el formulario y los resultados */
+}
+
+label {
+    display: block;       /* La etiqueta ocupa toda la línea */
+    margin-bottom: 5px;  /* Pequeño espacio debajo de la etiqueta */
+}
+
+input[type="text"] {
+    width: 300px;        /* Ancho del campo de entrada */
+    padding: 8px;         /* Espacio interior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px;    /* Bordes redondeados */
+}
+
+button {
+    padding: 8px 15px;      /* Espacio interior del botón */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white;           /* Color del texto */
+    border: none;            /* Sin borde */
+    border-radius: 4px;    /* Bordes redondeados */
+    cursor: pointer;       /* Cambia el cursor al pasar por encima */
+}
+
+button:hover {
+    background-color: #3e8e41; /* Color de fondo al pasar el ratón */
+}
+
+#results {
+    /* Estilos para los resultados (los ajustaremos más adelante) */
+}
+
+.repo-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.repo-item h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.repo-item a {
+    color: #0366d6; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilo para el mensaje de error */
+.error-message{
+    color: red;
+    font-weight: bold;
+}
