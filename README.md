@@ -32,9 +32,9 @@ Este proyecto es un buscador de repositorios de GitHub que permite a los usuario
 ```
 awesome-github-search/
 ├── index.html 
-|-- src    
+├── src    
    ├── script.js
-|-- css          
+├── css          
    ├── style.css          
 └── README.md           
 ```
