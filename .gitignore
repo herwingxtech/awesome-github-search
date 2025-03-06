@@ -2,7 +2,7 @@
 node_modules/
 
 # Archivos de salida de Tailwind (output.css)
-dist/
+src/output.css
 
 # Archivos de configuración de los editores
 .vscode/
