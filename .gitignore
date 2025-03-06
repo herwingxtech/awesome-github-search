@@ -1,0 +1,8 @@
+# Node.js
+node_modules/
+
+# Archivos de salida de Tailwind (output.css)
+dist/
+
+# Archivos de configuración de los editores
+.vscode/
