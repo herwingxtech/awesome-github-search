@@ -1,10 +1,10 @@
 # Buscador de Repositorios de GitHub
 
-[![GitHub Pages Status](https://img.shields.io/badge/GitHub%20Pages-live-green.svg)](ghsearch.is-a.dev/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Pages Status](https://img.shields.io/badge/GitHub%20Pages-live-green.svg)](https://ghsearch.is-a.dev/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Este proyecto es un buscador de repositorios de GitHub que permite a los usuarios encontrar proyectos según un tema o palabra clave. Está construido utilizando tecnologías web estándar: HTML, CSS y JavaScript (sin frameworks ni bibliotecas externas, aparte de `fetch` para las peticiones HTTP).  Utiliza la API de GitHub para obtener los resultados de búsqueda en tiempo real.  Este proyecto ha sido desarrollado como parte de mi aprendizaje sobre la API de GitHub y se considera una posible contribución al GitHub Developer Program.
 
-**[Ver Demo en Vivo](ghsearch.is-a.dev/)**  <!-- Reemplaza con tu URL -->
+**[Ver Demo en Vivo](https://ghsearch.is-a.dev/)**  <!-- Reemplaza con tu URL -->
 
 ## Características
 
