@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">                  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Repositorios GitHub</title>
-    <link rel="stylesheet" href="./css/styles.css">  <!-- Enlace a nuestra hoja de estilos -->
+    <link rel="stylesheet" href="./src/output.css"> <!-- Enlace a nuestra hoja de estilos -->
     <meta property="og:title" content="Buscador de Repositorios GitHub">
     <meta property="og:description" content="Una aplicación para buscar repositorios en GitHub por tema.">
     <meta property="og:image" content="./assets/og-image.png">
@@ -20,19 +21,24 @@
     <meta name="twitter:url" content="https://ghsearch.is-a.dev/">
     <link rel="icon" href="./assets/github.png" type="image/png">
 </head>
+
 <body>
-    <h1>Buscador de Repositorios GitHub</h1>
+        <div class="w-[80%] mx-auto">
 
-    <form id="search-form">
-        <label for="topic">Tema:</label>
-        <input type="text" id="topic" name="topic" required>
-        <button type="submit">Buscar</button>
-    </form>
-
+            <h1 class="text-center">Buscador de Repositorios GitHub</h1>
+            <form class="flex flex-col gap-4" id="search-form">
+                <label for="topic">Tema:</label>
+                
+                <input class="border border-black border-" type="text" id="topic" name="topic" required>
+                <button class="bg-blue-500 w-32 h-8 self-center text-white" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
     <div id="results">
         <!-- Aquí se mostrarán los resultados -->
     </div>
 
-    <script src="./src/script.js"></script>  <!-- Enlace a nuestro script JavaScript -->
+    <script src="./src/script.js"></script> <!-- Enlace a nuestro script JavaScript -->
 </body>
+
 </html>
