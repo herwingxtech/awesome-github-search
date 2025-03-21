@@ -27,6 +27,35 @@ Este proyecto es un buscador de repositorios de GitHub que permite a los usuario
 *   **GitHub API (v3 REST):**  Específicamente, el endpoint `/search/repositories`.
 *   **GitHub Pages:** Para el alojamiento del sitio web estático.
 
+## Instalación y Configuración de Tailwind CSS
+
+Este proyecto utiliza Tailwind CSS para los estilos. A continuación, se describen los pasos para instalar y generar el archivo `output.css` sin un archivo de configuración:
+
+1. **Instalar Node.js y npm**  
+   Asegúrate de tener instalado Node.js y npm en tu sistema. Puedes descargarlos desde [Node.js](https://nodejs.org/).
+
+2. **Instalar Tailwind CLI**  
+   Ejecuta el siguiente comando para instalar Tailwind CLI globalmente:
+   ```bash
+   npm install -g tailwindcss
+   ```
+
+3. **Generar el archivo `output.css`**  
+   Ejecuta el siguiente comando para generar el archivo CSS procesado y mantenerlo actualizado automáticamente mientras trabajas:
+   ```bash
+   npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+   ```
+   - **`-i ./src/input.css`**: Especifica el archivo de entrada (`input.css`) que contiene las directivas de Tailwind necesarias:
+     ```css
+     @tailwind base;
+     @tailwind components;
+     @tailwind utilities;
+     ```
+   - **`-o ./src/output.css`**: Especifica el archivo de salida (`output.css`) donde se generará el CSS procesado.
+   - **`--watch`**: Mantiene el proceso en ejecución para regenerar automáticamente el archivo `output.css` cada vez que realices cambios en los estilos.
+
+   Una vez ejecutado este comando, el archivo `output.css` estará listo para ser utilizado en tu proyecto.
+
 ## Estructura del Proyecto
 
 ```
