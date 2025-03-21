@@ -2,43 +2,55 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Repositorios GitHub</title>
-    <link rel="stylesheet" href="./src/output.css"> <!-- Enlace a nuestra hoja de estilos -->
-    <meta property="og:title" content="Buscador de Repositorios GitHub">
-    <meta property="og:description" content="Una aplicación para buscar repositorios en GitHub por tema.">
-    <meta property="og:image" content="./assets/og-image.png">
-    <meta property="og:url" content="https://ghsearch.is-a.dev/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Buscador de Repositorios GitHub">
-    <meta name="twitter:description" content="Una aplicación para buscar repositorios en GitHub por tema.">
-    <meta name="twitter:image" content="./assets/og-image.png">
-    <meta name="twitter:site" content="@herwingxtech">
-    <meta name="twitter:creator" content="@herwingxtech">
-    <meta name="twitter:domain" content="ghsearch.is-a.dev">
-    <meta name="twitter:url" content="https://ghsearch.is-a.dev/">
-    <link rel="icon" href="./assets/github.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Repositorios GitHub</title>
+  <link rel="stylesheet" href="./src/output.css"> <!-- Enlace a nuestra hoja de estilos -->
+  <link rel="stylesheet" href="./css/effects.css">
+  <meta property="og:title" content="Buscador de Repositorios GitHub">
+  <meta property="og:description" content="Una aplicación para buscar repositorios en GitHub por tema.">
+  <meta property="og:image" content="./assets/og-image.png">
+  <meta property="og:url" content="https://ghsearch.is-a.dev/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buscador de Repositorios GitHub">
+  <meta name="twitter:description" content="Una aplicación para buscar repositorios en GitHub por tema.">
+  <meta name="twitter:image" content="./assets/og-image.png">
+  <meta name="twitter:site" content="@herwingxtech">
+  <meta name="twitter:creator" content="@herwingxtech">
+  <meta name="twitter:domain" content="ghsearch.is-a.dev">
+  <meta name="twitter:url" content="https://ghsearch.is-a.dev/">
+  <link rel="icon" href="./assets/github.png" type="image/png">
 </head>
 
-<body class="bg-[#111111] text-white">
-    <div class="w-[80%] mx-auto">
+<body>
+  <div class="search-container">
+    <form id="search-form">
+      <div class="glow-effect">
+        <div class="relative flex items-center w-full bg-gray-900 rounded-full overflow-hidden">
+          <div class="flex items-center pl-4 py-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <input class="w-full bg-transparent text-white text-2xl pl-3 pr-4 py-4 focus:outline-none"
+            placeholder="Buscar repositorios en GitHub..." type="text" id="topic" name="topic" required>
+          <button class="bg-gray-800 p-4 rounded-full mr-2 hover:bg-gray-700 transition-colors text-white"
+            type="submit">Buscar</button>
+        </div>
+      </div>
+    </form>
 
-        <h1 class="text-center">Buscador de Repositorios GitHub</h1>
-        <form class="flex flex-col gap-4" id="search-form">
-            <label for="topic">Tema:</label>
+  </div>
 
-            <input class="border border-white" type="text" id="topic" name="topic" required>
-            <button class="bg-blue-500 w-32 h-8 self-center text-white" type="submit">Buscar</button>
-        </form>
-    </div>
-    </div>
-    <div id="results">
-        <!-- Aquí se mostrarán los resultados -->
-    </div>
 
-    <script src="./src/script.js"></script> <!-- Enlace a nuestro script JavaScript -->
+  <div id="results">
+    <!-- Aquí se mostrarán los resultados -->
+  </div>
+
+  <script src="./src/script.js"></script> <!-- Enlace a nuestro script JavaScript -->
 </body>
 
 </html>

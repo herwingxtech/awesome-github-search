@@ -1,0 +1,52 @@
+body {
+  background-color: #111111;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #e879f9, #9333ea);
+  border-radius: 9999px;
+  z-index: -1;
+  animation: pulse-slow 3s infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.8;
+    box-shadow: 0 0 15px #e879f9, 0 0 30px #e879f9;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px #e879f9, 0 0 40px #e879f9;
+  }
+}
+
+/* Estilos para los resultados */
+.repo-card {
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+  border-color: #e879f9;
+  box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
+}
