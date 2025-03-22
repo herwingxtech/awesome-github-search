@@ -39,31 +39,3 @@ body {
     box-shadow: 0 0 20px #e879f9, 0 0 40px #e879f9;
   }
 }
-
-/* Estilos para los resultados */
-.repo-card {
-  border: 1px solid #333;
-  transition: all 0.3s ease;
-}
-
-.repo-card:hover {
-  border-color: #e879f9;
-  box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
-}
-
-
-.repo-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.repo-item h2 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.repo-item a {
-  color: #0366d6; /* Color de los enlaces */
-  text-decoration: none; /* Sin subrayado */
-}
