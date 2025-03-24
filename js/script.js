@@ -55,7 +55,7 @@ function displayResults(repositories) {
         
         card.innerHTML = `
           <div class="flex justify-between items-start">
-            <h3 class="text-xl font-bold text-purple-300">
+            <h3 class="text-xl font-bold text-blue-400">
               <a href="${repo.html_url}" target="_blank" class="hover:underline">${repo.name}</a>
             </h3>
             <div class="flex items-center text-gray-400">
