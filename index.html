@@ -23,8 +23,11 @@
   <link rel="icon" href="./assets/github.png" type="image/png">
 </head>
 
-<body>
-  <div class="search-container">
+<body class="grid min-h-dvh grid-rows-[0.1fr_auto_0.1fr] bg-[#111111]">
+  <header class="text-white text-center border-b-[1px] border-white py-4">
+    <h1>Buscador de Repositorios GitHub</h1>
+  </header>
+  <section class="search-container">
     <form id="search-form">
       <div class="glow-effect">
         <div class="relative flex items-center w-full bg-gray-900 rounded-full overflow-hidden mb-10">
@@ -45,11 +48,10 @@
     <div id="results" class="text-white">
       <!-- Aquí se mostrarán los resultados -->
     </div>
-  </div>
-
-
-
-
+  </section>
+  <footer class="text-white text-center border-t-[1px] border-white py-4">
+    <p>Desarrollado con 💙 por: <a href="github.com/herwingxtech" target="_blank">herwingxtech</a>
+  </footer>
   <script src="./js/script.js"></script> <!-- Enlace a nuestro script JavaScript -->
 </body>
 
