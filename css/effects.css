@@ -16,7 +16,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(90deg, #e879f9, #9333ea);
+  background: linear-gradient(90deg, #007991, #78ffd6);
   border-radius: 9999px;
   z-index: -1;
   animation: pulse-slow 3s infinite;
@@ -25,10 +25,10 @@
 @keyframes pulse-slow {
   0%, 100% {
     opacity: 0.8;
-    box-shadow: 0 0 15px #e879f9, 0 0 30px #e879f9;
+    box-shadow: 0 0 5px #51a2ff, 0 0 20px #51a2ff;
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 20px #e879f9, 0 0 40px #e879f9;
-  }
+    box-shadow: 0 0 10px #51a2ff, 0 0 30px #51a2ff;
+  } 
 }
