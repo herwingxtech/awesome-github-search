@@ -3,57 +3,55 @@ const topicInput = document.getElementById('topic');
 const resultsDiv = document.getElementById('results');
 
 searchForm.addEventListener('submit', async (event) => {
-    event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+  event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
 
-    const topic = topicInput.value;
+  const topic = topicInput.value;
 
-    // Limpiar resultados anteriores
-    resultsDiv.innerHTML = '';
+  // Limpiar resultados anteriores
+  loadingState.classList.remove('hidden');
+  resultsDiv.innerHTML = '';
 
-     //Mostrar mensaje de espera
-     resultsDiv.innerHTML = '<p>Buscando...</p>';
+  try {
+    const response = await fetch(`https://api.github.com/search/repositories?q=${topic}&sort=stars&order=desc`);
 
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
 
-    try {
-        const response = await fetch(`https://api.github.com/search/repositories?q=${topic}&sort=stars&order=desc`);
-
-        if (!response.ok) {
-            throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
-
-        const data = await response.json();
-
-        //Mostrar resultados o mensaje de "no encontrado"
-        if(data.total_count === 0){
-            resultsDiv.innerHTML =`<div class="text-center text-white p-8">
+    const data = await response.json();
+    // Ocultar estado de carga
+    loadingState.classList.add('hidden');
+    //Mostrar resultados o mensaje de "no encontrado"
+    if (data.total_count === 0) {
+      resultsDiv.innerHTML = `<div class="text-center text-white p-8">
                 <p class="text-xl">No se encontraron repositorios para "${topic}"</p>
               </div>`;
-        } else{
-            displayResults(data.items);
-        }
-
-
-
-    } catch (error) {
-        resultsDiv.innerHTML = `<p class="error-message">Error al buscar repositorios: ${error.message}</p>`;
+    } else {
+      displayResults(data.items);
     }
+
+
+
+  } catch (error) {
+    resultsDiv.innerHTML = `<p class="error-message">Error al buscar repositorios: ${error.message}</p>`;
+  }
 });
 
 function displayResults(repositories) {
-    resultsDiv.innerHTML = ''; // Limpiar resultados anteriores
+  resultsDiv.innerHTML = ''; // Limpiar resultados anteriores
 
-    repositories.forEach(repo => {
-        const card = document.createElement('div');
-        card.className = 'my-4 repo-card bg-gray-800 rounded-lg p-6 text-white hover:bg-gray-700 transition-colors';
-        
-        // Formatear la fecha
-        const updatedDate = new Date(repo.updated_at).toLocaleDateString('es-ES', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
-        
-        card.innerHTML = `
+  repositories.forEach(repo => {
+    const card = document.createElement('div');
+    card.className = 'my-4 repo-card bg-gray-800 rounded-lg p-6 text-white hover:bg-gray-700 transition-colors';
+
+    // Formatear la fecha
+    const updatedDate = new Date(repo.updated_at).toLocaleDateString('es-ES', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
+    card.innerHTML = `
           <div class="flex justify-between items-start">
             <h3 class="text-xl font-bold text-blue-400">
               <a href="${repo.html_url}" target="_blank" class="hover:underline">${repo.name}</a>
@@ -77,7 +75,7 @@ function displayResults(repositories) {
             </span>
           </div>
         `;
-        
-        resultsDiv.appendChild(card);
-    });
+
+    resultsDiv.appendChild(card);
+  });
 }
