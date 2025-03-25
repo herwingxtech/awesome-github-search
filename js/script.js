@@ -33,6 +33,8 @@ searchForm.addEventListener('submit', async (event) => {
 
 
   } catch (error) {
+    // Ocultar estado de carga
+    loadingState.classList.add('hidden');
     resultsDiv.innerHTML = `<p class="error-message">Error al buscar repositorios: ${error.message}</p>`;
   }
 });
