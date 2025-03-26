@@ -32,7 +32,7 @@
           <a href="./">
             <img src="./assets/logo-white.svg" class="h-10 w-10 mr-3" alt="GitHub Logo">
           </a>
-          <h1 class="hidden sm:block text-3xl font-bold text-white dark:text-white light:text-gray-900 neon-text">GitHub Search</h1>
+          <h1 class="hidden sm:block text-3xl font-bold text-white light:text-gray-900 neon-text">GitHub Search</h1>
         </div>
         <div class="flex items-center space-x-4 ">
           <!-- Botón de estrellas en GitHub -->
@@ -55,13 +55,13 @@
           <!-- Botón de modo oscuro/claro -->
           <button id="theme-toggle" class="glow-effect p-2 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-colors">
             <!-- Icono de sol (modo claro) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden dark:block" fill="none" viewBox="0 0 24 24"
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 dark:hidden block" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
             <!-- Icono de luna (modo oscuro) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block dark:hidden" fill="none" viewBox="0 0 24 24"
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 dark:block hidden" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
@@ -74,9 +74,9 @@
 
   <main class="search-container px-4 w-full">
     <div class="text-center mb-12 mt-8">
-      <h2 class="text-2xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 neon-text mb-4">Explora
+      <h2 class="text-2xl md:text-5xl font-bold text-white light:text-gray-900 neon-text mb-4">Explora
         Repositorios</h2>
-      <p class="text-blue-200 dark:text-blue-200 light:text-blue-800 max-w-2xl mx-auto">Descubre los mejores
+      <p class="text-blue-200 light:text-blue-800 max-w-2xl mx-auto">Descubre los mejores
         proyectos de código abierto en GitHub con nuestra herramienta de búsqueda potenciada con efectos neón.</p>
     </div>
     <form id="search-form">
