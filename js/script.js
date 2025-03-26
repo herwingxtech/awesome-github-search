@@ -44,7 +44,7 @@ function displayResults(repositories) {
 
   repositories.forEach(repo => {
     const card = document.createElement('div');
-    card.className = 'my-4 repo-card bg-gray-800 rounded-lg p-6 text-white hover:bg-gray-700 transition-colors';
+    card.className = 'my-4 bg-gray-800 rounded-lg py-6 px-2 text-white hover:bg-gray-700 transition-colors';
 
     // Formatear la fecha
     const updatedDate = new Date(repo.updated_at).toLocaleDateString('es-ES', {
